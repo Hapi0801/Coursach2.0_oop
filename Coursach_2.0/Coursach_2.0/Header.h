@@ -1,5 +1,5 @@
 #pragma once
-//#define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
 #include <clocale>
 #include <fstream>
@@ -8,6 +8,8 @@
 #include <conio.h>
 #include <Windows.h>
 #include <conio.h>
+#include <sstream>
+#include <stdlib.h>
 #include "List.h"
 
 using namespace std;
@@ -83,58 +85,66 @@ protected:
 	int flat;
 	char key[20];
 	int houseNumberFind;
-	string in;
-	char q[10];
+
 public:
 	friend ostream& operator<<(ostream& os, Client &client) {
-		os << client.in;
+		os << client.name;
+		os << client.surname;
+		os << client.age;
+		os << client.street;
 		os << client.houseNumber;
 		os << client.flat;
 		return os;
 	}
 	friend istream& operator>>(istream& is, Client& client) {
-		cout << "¬ведите им€: ";
+		cout << "¬ведите им€ клиента: ";
 		is >> client.name;
-		cout << "¬ведите фамилию: ";
+		cout << "¬ведите фамилию клиента: ";
 		is >> client.surname;
+		cout << "¬ведите возрваст клиента: ";
 		is >> client.age;
+		cout << "¬ведите название улицы проживани€ клиента: ";
 		is >> client.street;
+		cout << "¬ведите номер дома клиента: ";
 		is >> client.houseNumber;
+		cout << "¬ведите номер квартиры клиента: ";
 		is >> client.flat;
 		return is;
 	}
+
 	Client() {
 		/*this->street = nullptr;*/
 		this->houseNumber = NULL;
 		this->flat = NULL;
 
 	}
-	/*Client(char* street,int houseNumber,int flat) {
-		this->street = street;
-		this->houseNumber = houseNumber;
-		this->flat = flat;
-	}*/
 	~Client() {
 		/*delete street;*/
 	}
 	//void setMainPrsnInfo();
 	//void getMainPrsnInfo();
-	void AddFirstClient();
-	void AddLastClient();
-	void ShowClientList();
-	void ClientDelete();
-	friend void DelClientMessage();
-	void FindClientByName();
-	void FindClientBySurname();
-	void FindClientByAdress();
-	void SaveClientInf();
-	void DownloadClientInf();
-	void EditClientInfo();
-	void SortName();
-	/*void setOrder();*/
-	void AddClientOrder();
-	void ShowOrder();
-	
+	//void AddFirstClient();
+	//void AddLastClient();
+	//void ShowClientList();
+	//void ClientDelete();
+	//friend void DelClientMessage();
+	//void FindClientByName();
+	//void FindClientBySurname();
+	//void FindClientByAdress();
+	//void SaveClientInf();
+	/*void DownloadClientInf();*/
+	//void EditClientInfo();
+	//void SortName();
+	///*void setOrder();*/
+	//void AddClientOrder();
+	//void ShowOrder();
+	//void set();
+	void setMainClientInfo();
+	void getMainClientInfo();
+	void save(Client &obj);
+	void download(Client &obj);
+	void print();
+	/*void add(Client &obj);*/
 };
 
 class Admin	{
@@ -143,4 +153,5 @@ protected:
 	char c;
 public:
 	void adminLogIn();
+	void encryption();
 };

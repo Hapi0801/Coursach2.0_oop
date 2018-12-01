@@ -5,70 +5,66 @@
 int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	//List<int>lst;
-	//lst.addLastElement(5);
-	//lst.addLastElement(11);
-	//lst.addLastElement(18);
-	//cout <<"Количество элементво списка: " << lst.getSize() << endl;
-	////cout << lst[1] << endl;
-	//
-	//for (int i = 0; i < lst.getSize(); i++){
-	//	cout << lst[i] << endl;
-	//}
-	//int k;
-	//cin >> k;
-	//lst.insertElement(20, k);
-	//cout << "Количество элементво списка: " << lst.getSize() << endl;
-	//for (int i = 0; i < lst.getSize(); i++){
-	//	cout << lst[i] << endl;
-	//}
-	//cout << "Delete last element" << endl;
-	//lst.deleteLastElement();
-	//lst.deleteFirstElement();
-	//for (int i = 0; i < lst.getSize(); i++){
-	//	cout << lst[i] << endl;
-	//}
-
-	//Client c(2,2);
-	//cout << c;
-	/*List<Client>lst;*/
-	//Client lst("qwe", 4, 4);
-	//cout << lst;
-	Client client;
-	List<Client>lst;
+    Client client;
+    List<Client>lst;
 	int x;
 	while (1) {
 		cout << "1.Добавление клиента в начало списка" << endl;
 		cout << "2.Добавление клиента в конец списка" << endl;
-		cout << "3.Просмотр клиентов" << endl;
+		cout << "3.Удаление" << endl;
 		cout << "4.Количество клиентов" << endl;
+		cout << "5.Чтение из файла" << endl;
 		cout << "0.Выход" << endl;
 		cin >> x;
 		switch (x) {
 				case 1:
 				{    
-                    cin >> client;
+                    client.setMainClientInfo();
 				    lst.addFirstElement(client);
-					cout << client;
+					client.getMainClientInfo();
+					lst.sav(client);
+
 					break;
 				}
 				case 2:
 				{
 					cin >> client;
+					/*client.setMainClientInfo();*/
 					lst.addLastElement(client);
+					/*client.getMainClientInfo();*/
+				/*	client.SaveClientInf();*/
 					break;
 				}
 				case 3:
 				{
+					int del;
+				    cin>> del;
+					lst.deleteElement(del);
+					
+				}
+				case 6:
+				{
 					for (int i = 0; i < lst.getSize(); i++) {
 						cout << lst[i] << endl;
+
 					}
 				}
 				break;
 				case 4:
-				{
+				{ 
 				  cout<<"Количество клиентов: "<< lst.getSize() << endl;
 				  break;
+				}
+				case 5:
+				{
+					
+					lst.downloadInfo(client);
+					
+					break;
+				}
+				case 7: {
+					lst.savууу(client);
+					break;
 				}
 				case 0:
 				{

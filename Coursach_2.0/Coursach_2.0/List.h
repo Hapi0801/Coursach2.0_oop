@@ -1,3 +1,4 @@
+
 template <typename T>
 class List {
 public:
@@ -16,7 +17,11 @@ public:
 	//для перехода по добавленным элементам
 	//index- номер возвращаемого элемента
 	T & operator[](const int index);
-
+	void downloadInfo(T data);
+	void sav(T data);
+	//void newGet(const char *s);
+	//void newWrite(const char *s);
+	void savууу(T data);
 private:
 	template<typename T>
 	class Node {
@@ -96,9 +101,9 @@ void List<T>::clearList()  {
 //добавление в начало списка
 template<typename T>
 void List<T>::addFirstElement(T data) {
-	first = new Node<T>(data,first);
+	first = new Node<T>(data, first);
 	size++;
-} 
+}
 
 //вставка элемента в список
 template<typename T>
@@ -112,14 +117,14 @@ void List<T>::insertElement(T data, int index) {
 	else {
 		Node<T> *prevElem = this->first;
 		//находим предшествующий и делаем вставку через некст
-		for (int i = 1; i < index-1; i++) {
+		for (int i = 1; i < index - 1; i++) {
 			prevElem = prevElem->pNext;
 		}
 		Node<T> *newNode = new Node<T>(data, prevElem->pNext);
 		prevElem->pNext = newNode;
-		size++; 
+		size++;
 	}
-} 
+}
 
 //удаление элемента по индексу
 template<typename T>
@@ -148,3 +153,89 @@ template<typename T>
 void List<T>::deleteLastElement() {
 	deleteElement(size);
 }
+
+
+template<typename T>
+void List<T>::downloadInfo(T data) {
+	ifstream fin;
+	fin.open("ClientDatabase.txt");
+	if (!fin.is_open()) {
+		cout << "Openning Error" << endl;
+	}
+	else {
+		cout << "File is ipen" << endl;
+		while (fin.read((char*)&data, sizeof(T))) {
+			addLastElement(data);
+			cout << data << endl;;
+		}
+	}
+	fin.close();
+}
+
+template<typename T>
+void List<T>::sav(T data) {
+	ofstream fout;
+	fout.open("ClientDatabase.txt", ofstream::app);
+	if (!fout.is_open()) {
+		cout << "Openning Error" << endl;
+	}
+	else {
+		cout << "File is ipen" << endl;
+		fout.write((char*)&data, sizeof(T));
+	}
+	fout.close();
+}
+
+template<typename T>
+void List<T>::savууу(T data) {
+	ofstream fout;
+	fout.open("ClientDatabase.txt");
+	if (!fout.is_open()) {
+		cout << "Openning Error" << endl;
+	}
+	else {
+		cout << "File is ipen" << endl;
+		fout.write((char*)&data, sizeof(T));
+	}
+	fout.close();
+}
+
+//template<typename T>
+//void List<T>::newGet(const char *s) {
+//	ifstream fin;
+//	fin.open(s);
+//	T obj;
+//	if (!fin.is_open()) {
+//		cout << "error" << endl;
+//	}
+//	else {
+//		while (fin.read((char*)&obj), sizeof(T))) {
+//		cout << "Egogog" << endl;
+//		addLastElement(obj);
+//}
+//	}
+//	fin.close();
+//}
+//
+//template<typename T>
+//void List<T>::newWrite(const char *s) {
+//	ofstream fo;
+//	fo.open(s);
+//	if (!fo.is_open()){
+//		cout << "error" << endl;
+//	}
+//	Node<T> *p = this->first;
+//	while (p->pNext != nullptr) {
+//		p = p->pNext;
+//	}
+//	while (p != NULL) {
+//		fout.write((char*)&p->data, sizeof(T));
+//		p = p->pNext;
+//	}
+//	fo.close();
+//}
+//
+//Node<T> *current = this->first;
+//while (current->pNext != nullptr) {
+//	current = current->pNext;
+//}
