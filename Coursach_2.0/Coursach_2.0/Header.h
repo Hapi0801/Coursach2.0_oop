@@ -41,10 +41,6 @@ public:
 //класс заказов
 //заказ будет инкапсулирвоан в клиента?????
 class Order {
-private:
-	//Order *firstOrd;
-	//Order *lastOrd;
-	//Order *nextOrd;
 protected:
 	Order *firstOrd;
 	Order *lastOrd;
@@ -79,8 +75,7 @@ private:
 	Client *lastCl;
 	Client *next;
 protected:
-	/*friend ostream& operator<<(ostream& os, const Client &client);*/
-    char street[20];
+	char street[20];
 	int houseNumber;
 	int flat;
 	char key[20];
@@ -116,35 +111,16 @@ public:
 		/*this->street = nullptr;*/
 		this->houseNumber = NULL;
 		this->flat = NULL;
-
 	}
-	~Client() {
-		/*delete street;*/
-	}
-	//void setMainPrsnInfo();
-	//void getMainPrsnInfo();
-	//void AddFirstClient();
-	//void AddLastClient();
-	//void ShowClientList();
-	//void ClientDelete();
-	//friend void DelClientMessage();
-	//void FindClientByName();
-	//void FindClientBySurname();
-	//void FindClientByAdress();
-	//void SaveClientInf();
-	/*void DownloadClientInf();*/
-	//void EditClientInfo();
-	//void SortName();
-	///*void setOrder();*/
-	//void AddClientOrder();
-	//void ShowOrder();
-	//void set();
+	~Client() {/*delete street;*/}
 	void setMainClientInfo();
 	void getMainClientInfo();
-	void save(Client &obj);
-	void download(Client &obj);
+	//void save(Client &obj);
+	//void download(Client &obj);
 	void print();
-	/*void add(Client &obj);*/
+	void sort(bool a);
+	int selectSearchCriteria();
+	void search(int i, char *input);
 };
 
 class Admin	{

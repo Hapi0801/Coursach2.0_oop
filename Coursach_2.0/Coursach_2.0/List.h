@@ -1,38 +1,36 @@
-
+//шаблон List
 template <typename T>
 class List {
 public:
 	List();
 	~List();
-    void addFirstElement(T data);
+	void addFirstElement(T data);
 	void addLastElement(T data);
 	void deleteFirstElement();
 	void insertElement(T data, int index);
 	void deleteElement(int index);
 	void deleteLastElement();
 	void clearList();
-	int getSize() { 
-		return size;
-	}
+	int getSize() {return size;}
 	//для перехода по добавленным элементам
 	//index- номер возвращаемого элемента
 	T & operator[](const int index);
 	void downloadInfo(T data);
-	void sav(T data);
-	//void newGet(const char *s);
-	//void newWrite(const char *s);
-	void savууу(T data);
+	void save(T data);
+	void print();
+	void sort();
+	void search();
 private:
 	template<typename T>
 	class Node {
 	public:
 		Node *pNext;
 		T data;
-		Node(T data=T(), Node *pNext = nullptr) {
+		Node(T data = T(), Node *pNext = nullptr) {
 			this->data = data;
 			this->pNext = pNext;
 		}
-    };
+	};
 	int size; //количество элементов в односвязном списке
 	Node<T> *first;
 };
@@ -57,14 +55,51 @@ void List<T>::addLastElement(T data) {
 	}
 	else {
 		Node<T> *current = this->first;
-		while (current->pNext !=nullptr) {
+		while (current->pNext != nullptr) {
 			current = current->pNext;
 		}
 		current->pNext = new Node<T>(data);
 	}
 	size++;
 }
-
+template<typename T>
+void List<T>::print() {
+	{
+		Node<T> *p = first;
+		while (p != NULL)
+		{
+			p->data.print();
+			p = p->pNext;
+		}
+	}
+}
+template<typename T>
+void List<T>::sort() {
+	{
+		Node<T> *p = first;
+		while (p != NULL)
+		{
+			p->data.sort(true);
+			p = p->pNext;
+		}
+	}
+}
+template<typename T>
+void List<T>::search() {
+	{
+		Node<T> *p = first;
+		int choice;
+		choice = p->data.selectSearchCriteria();
+		char input[30];
+		cout << "Введите данные для поиска: ";
+		cin >> input;
+		while (p != NULL)
+		{
+			p->data.search(choice, input);
+			p = p->pNext;
+		}
+	}
+}
 //перегрузка [] для итераций
 template<typename T>
 T & List<T>::operator[](const int index) {
@@ -129,10 +164,11 @@ void List<T>::insertElement(T data, int index) {
 //удаление элемента по индексу
 template<typename T>
 void List<T>::deleteElement(int index) {
-	if (index == 0) {
+	index--;
+	if (index < 0) {
 		cout << "Некорректный ввод" << endl;
 	}
-	else if (index == 1) {
+	else if (index == 0) {
 		deleteFirstElement();
 	}
 	else {
@@ -154,7 +190,7 @@ void List<T>::deleteLastElement() {
 	deleteElement(size);
 }
 
-
+//загрузка из файла
 template<typename T>
 void List<T>::downloadInfo(T data) {
 	ifstream fin;
@@ -163,79 +199,31 @@ void List<T>::downloadInfo(T data) {
 		cout << "Openning Error" << endl;
 	}
 	else {
-		cout << "File is ipen" << endl;
+		cout << "File is open" << endl;
+		clearList();
 		while (fin.read((char*)&data, sizeof(T))) {
 			addLastElement(data);
-			cout << data << endl;;
 		}
 	}
 	fin.close();
 }
 
+//сохранение в файл
 template<typename T>
-void List<T>::sav(T data) {
+void List<T>::save(T data) {
 	ofstream fout;
-	fout.open("ClientDatabase.txt", ofstream::app);
+	Node<T> *p = first;
+	fout.open("ClientDatabase.txt", ios_base::out | ios_base::trunc);
 	if (!fout.is_open()) {
 		cout << "Openning Error" << endl;
 	}
 	else {
-		cout << "File is ipen" << endl;
-		fout.write((char*)&data, sizeof(T));
+		cout << "File is open" << endl;
+		while (p != NULL) {
+			fout.write((char*)&p->data, sizeof(T));
+			p = p->pNext;
+		}
 	}
 	fout.close();
 }
 
-template<typename T>
-void List<T>::savууу(T data) {
-	ofstream fout;
-	fout.open("ClientDatabase.txt");
-	if (!fout.is_open()) {
-		cout << "Openning Error" << endl;
-	}
-	else {
-		cout << "File is ipen" << endl;
-		fout.write((char*)&data, sizeof(T));
-	}
-	fout.close();
-}
-
-//template<typename T>
-//void List<T>::newGet(const char *s) {
-//	ifstream fin;
-//	fin.open(s);
-//	T obj;
-//	if (!fin.is_open()) {
-//		cout << "error" << endl;
-//	}
-//	else {
-//		while (fin.read((char*)&obj), sizeof(T))) {
-//		cout << "Egogog" << endl;
-//		addLastElement(obj);
-//}
-//	}
-//	fin.close();
-//}
-//
-//template<typename T>
-//void List<T>::newWrite(const char *s) {
-//	ofstream fo;
-//	fo.open(s);
-//	if (!fo.is_open()){
-//		cout << "error" << endl;
-//	}
-//	Node<T> *p = this->first;
-//	while (p->pNext != nullptr) {
-//		p = p->pNext;
-//	}
-//	while (p != NULL) {
-//		fout.write((char*)&p->data, sizeof(T));
-//		p = p->pNext;
-//	}
-//	fo.close();
-//}
-//
-//Node<T> *current = this->first;
-//while (current->pNext != nullptr) {
-//	current = current->pNext;
-//}
