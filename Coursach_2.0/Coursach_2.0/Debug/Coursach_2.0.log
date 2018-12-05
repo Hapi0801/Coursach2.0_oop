@@ -1,10 +1,8 @@
-﻿Сборка начата 03.12.2018 0:14:13.
+﻿Сборка начата 05.12.2018 8:50:09.
      1>Проект "C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursach_2.0\Coursach_2.0\Coursach_2.0.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp sourceClient.cpp
-         sourceClient.cpp
+         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         Создание кода...
        Link:
          D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursach_2.0\Debug\Coursach_2.0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursach_2.0\Debug\Coursach_2.0.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursach_2.0\Debug\Coursach_2.0.lib" /MACHINE:X86 Debug\Admin.obj
          Debug\main.obj
@@ -14,4 +12,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:04.86
+Затраченное время: 00:00:02.57
