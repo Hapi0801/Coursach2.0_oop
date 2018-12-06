@@ -231,11 +231,9 @@ void Client::sort(Client &obj,Client &obj1) {
 	}
 }
 void Client::print() {
-	cout << "Имя клиента: " << this->name << endl;
-	cout << "Фамилия клиента: " << this->surname << endl;
-	cout << "Возраст клиента: " << this->age << endl;
-	cout << "Улица проживания клиента: " << this->street << endl;
-	cout << "Номер дома клиента: " << this->houseNumber << endl;
-	cout << "Номер квартиры клиента: " << this->flat << endl;
+	cout << "|`````````````|" << "```````````|" <<"````````|"<<"``````````````|"<<"````````````|"<<"````````````````|"<< endl;
+	cout << "| Имя клиента |" << "  Фамилия  |" <<" Возраст|"<<"    Улица     |"<<" Номер дома |"<<" Номер квартиры |"<<endl;
+	cout << "|`````````````|" << "```````````|" <<"````````|"<<"``````````````|"<<"````````````|"<<"````````````````|"<<endl;
+	cout << "|"<< setw(13) << this->name <<"|"<<setw(11) << this->surname <<"|" << setw(8) << this->age <<"|"<<setw(14)<<this->street<<"|"<<setw(12)<<this->houseNumber<<"|"<<setw(16)<<this->flat<<"|"<<endl;
 }
 

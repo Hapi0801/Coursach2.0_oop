@@ -6,7 +6,7 @@ void userMenu(List<Admin> &adm) {
 		cout << "1.Добавить пользователя" << endl;
 		cout << "2.Список пользователей" << endl;
 		cout << "3.Удалить пользователя" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -51,7 +51,7 @@ int orderMenu(List<Client> &lst, List<Product> &pro, List<Order> &ord,List<Couri
 		cout << "6.Поиск заказов" << endl;
 		cout << "7.Прибыль" << endl;
 		cout << "8.Назначить курьера на заказ" << endl;
-		cout << "0.Выход" << endl;
+		cout << "0.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -110,10 +110,11 @@ int editMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 	Product product;
 	Courier courier;
 	while (1) {
+		system("cls");
 		cout << "1.Редактирование клиентов" << endl;
 		cout << "2.Редактирование товаров" << endl;
 		cout << "3.Редактирование курьеров" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -143,10 +144,11 @@ int searchMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 	Product product;
 	Courier courier;
 	while (1) {
+		system("cls");
 		cout << "1.Поиск клиентов" << endl;
 		cout << "2.Поиск товаров" << endl;
 		cout << "3.Поиск курьеров" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -176,10 +178,11 @@ int delMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 	Product product;
 	Courier courier;
 	while (1) {
+		system("cls");
 		cout << "1.Удаление клиентов" << endl;
 		cout << "2.Удаление товаров" << endl;
 		cout << "3.Удаление курьеров" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -218,10 +221,11 @@ int printMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 	Product product;
 	Courier courier;
 	while (1) {
+		system("cls");
 		cout << "1.Просмотр клиентов" << endl;
 		cout << "2.Просмотр товаров" << endl;
 		cout << "3.Просмотр курьеров" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -249,10 +253,11 @@ int addMenu(List<Client> &lst,List<Product> &pro,List<Courier> &cour) {
 	Product product;
 	Courier courier;
 	while (1) {
+		system("cls");
 		cout << "1.Добавление клиента" << endl;
 		cout << "2.Добавление товара" << endl;
 		cout << "3.Добавление курьера" << endl;
-		cout << "4.Выход" << endl;
+		cout << "4.Назад" << endl;
 		int x;
 		cin >> x;
 		switch (x) {
@@ -385,38 +390,38 @@ int menu(List<Client> &lst, List<Product> &pro,List<Order> &ord,List<Courier> &c
 	system("pause");
 	return 0;
 }
-void setcur(int x, int y)//установка курсора на позицию  x y 
-{
-	COORD coord;
-	coord.X = x;
-	coord.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-};
-BOOL WINAPI CtrlHandler(DWORD fdwCtrlType) {
-	switch (fdwCtrlType)
-	{ 
-	case CTRL_CLOSE_EVENT:
-		Beep(600, 200);
-		system("cls");
-		string str="";
-		while (str.length()< 35) {
-			setcur(0, 0);
-			Sleep(70);
-			cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t"<<str;
-			str += "||";
-		}
-		return TRUE;
-	}
-}
+//void setcur(int x, int y)//установка курсора на позицию  x y 
+//{
+//	COORD coord;
+//	coord.X = x;
+//	coord.Y = y;
+//	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+//};
+//BOOL WINAPI CtrlHandler(DWORD fdwCtrlType) {
+//	switch (fdwCtrlType)
+//	{ 
+//	case CTRL_CLOSE_EVENT:
+//		Beep(600, 200);
+//		system("cls");
+//		string str="";
+//		while (str.length()< 35) {
+//			setcur(0, 0);
+//			Sleep(70);
+//			cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t"<<str;
+//			str += "||";
+//		}
+//		return TRUE;
+//	}
+//}
 int main() {
-	string str = "";
-	while (str.length()< 35) {
-		setcur(0, 0);
-		Sleep(70);
-		cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t" << str;
-		str += "||";
-	}
-	system("cls");
+	//string str = "";
+	//while (str.length()< 35) {
+	//	setcur(0, 0);
+	//	Sleep(70);
+	//	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t" << str;
+	//	str += "||";
+	//}
+	//system("cls");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
@@ -431,7 +436,7 @@ int main() {
 	Client client;
 	Product product;
 	Order order;
-	SetConsoleCtrlHandler(CtrlHandler, TRUE);
+	/*SetConsoleCtrlHandler(CtrlHandler, TRUE);*/
 	cour.downloadInfo(courier,"CourierDatabase.txt");
 	ord.downloadInfo(order,"OrderDatabase.txt");
 	lst.downloadInfo(client, "ClientDatabase.txt");
@@ -454,7 +459,7 @@ int main() {
 			int i=adm.compare(log,pas); 
 			if (i == 1) {
 				system("cls");
-				cout << "Вы не админ, пошли нахуй" << endl;
+				cout << "Вы не админ, пошли нахуй,пожалуйста" << endl;
 			}
 			else if (i == 2) {
 				system("cls");
@@ -464,7 +469,7 @@ int main() {
 			else { system("cls"); cout << "Проверьте правильность ввода данных" << endl; }
 			break; }
 		case 2:adm.saveA("Admin.txt"); exit(0); break;
-		default:system("cls"); cout << "Нет такого  пункта меню"; break;
+		default:system("cls"); cout << "Нет такого  пункта меню"<<endl; break;
 		}
 	}
 	system("pause");

@@ -1,16 +1,19 @@
-﻿  main.cpp
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\header.h(97): warning C4305: =: усечение из "double" в "float"
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\main.cpp(422): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(170): warning C4018: <: несоответствие типов со знаком и без знака
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(141): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(138): note: выполняется компиляция ссылки на экземпляр шаблон функции "void List<Admin>::encryption(void)"
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(362): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\main.cpp(425): note: выполняется компиляция ссылки на экземпляр шаблон функции "List<Admin>::List(void)"
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\main.cpp(16): note: выполняется компиляция ссылки на экземпляр шаблон класс "List<Admin>"
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(175): warning C4018: <: несоответствие типов со знаком и без знака
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(267): warning C4018: <: несоответствие типов со знаком и без знака
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(239): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
-  d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(107): note: выполняется компиляция ссылки на экземпляр шаблон функции "void List<Admin>::decrypt(void)"
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\list.h(272): warning C4018: <: несоответствие типов со знаком и без знака
-d:\kursach\coursach2.0_oop\coursach_2.0\coursach_2.0\main.cpp(410): warning C4715: CtrlHandler: значение возвращается не при всех путях выполнения
-  Coursach_2.0.vcxproj -> D:\kursach\Coursach2.0_oop\Coursach_2.0\Debug\Coursach_2.0.exe
+﻿Сборка начата 07.12.2018 0:06:44.
+     1>Проект "C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Coursach_2.0\Coursach_2.0.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sourceClient.cpp
+         sourceClient.cpp
+     1>c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\header.h(97): warning C4305: =: усечение из "double" к "float"
+       Link:
+         D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.lib" /MACHINE:X86 Debug\Admin.obj
+         Debug\main.obj
+         Debug\sourceClient.obj
+         Debug\sourceCourier.obj
+         Debug\sourceOrdercpp.obj
+         Debug\sourceProduct.obj
+         Coursach_2.0.vcxproj -> C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.exe
+     1>Сборка проекта "C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Coursach_2.0\Coursach_2.0.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:02.41

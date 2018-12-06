@@ -9,7 +9,7 @@ void Product::add() {
 }
 void Product::print() {
 	cout << "Название товара: " << this->ProductName << endl;
-	cout << "Введите код товара: " << this->ProductCode << endl;
+	cout << "Код товара: " << this->ProductCode << endl;
 	cout << "Стоимость товара: " << this->ProductCost << endl;
 }
 int Product::selectSearchCriteria() {
