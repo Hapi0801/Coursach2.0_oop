@@ -68,7 +68,6 @@
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="List.h" />
-    <ClInclude Include="Stream.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
