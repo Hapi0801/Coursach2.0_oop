@@ -1,4 +1,6 @@
 #include "Header.h"
+
+//добавить продукт в список
 void Product::add() {
 	cout << "Введите название товара: ";
 	cin >> this->ProductName;
@@ -7,11 +9,16 @@ void Product::add() {
 	cout << "Введите стоимость товара: ";
 	cin >> this->ProductCost;
 }
+
+//вывод спсика продуктов в табличном виде
 void Product::print() {
-	cout << "Название товара: " << this->ProductName << endl;
-	cout << "Код товара: " << this->ProductCode << endl;
-	cout << "Стоимость товара: " << this->ProductCost << endl;
+	cout << "|`````````````````|" << "````````````|" << "```````````|" << endl;
+	cout << "| Название товара |" << " Код товара |" <<" Стоимость |"<< endl;
+	cout << "|`````````````````|" << "````````````|" << "```````````|" << endl;
+	cout << "|" << setw(17) << this->ProductName << "|" << setw(12) << this->ProductCode << "|" << setw(11) << this->ProductCost <<"|"<< endl;
 }
+
+//выбор критерия для поиска продукта
 int Product::selectSearchCriteria() {
 	int choice;
 	cout << "По чем будем искать, голум?" << endl;
@@ -21,6 +28,8 @@ int Product::selectSearchCriteria() {
 	cin >> choice;
 	return choice;
 }
+
+//функция поиска продукта
 void Product::search(int choice, char *input) {
 	switch (choice) {
 	case 1:
@@ -47,6 +56,8 @@ void Product::search(int choice, char *input) {
 	}
 	}
 }
+
+//выбор критерия для редактирования
 int Product::selectEditCriteria() {
 	int choice;
 	cout << "Что будем редактировать, простак?" << endl;
@@ -57,31 +68,39 @@ int Product::selectEditCriteria() {
 	cin >> choice;
 	return choice;
 }
+
+//функция редактирования данных
 void Product::edit(int choice) {
 	switch (choice) {
 	case 1:
 	{
 		cout << "Редактируемый товар: " << this->ProductName << endl;
+		cout << "Новое название товара: ";
 		cin >> this->ProductName;
 		break;
 	}
 	case 2: {
 		cout << "Редактируемый код товара: " << this->ProductCode << endl;
+		cout << "Новый код товара: ";
 		cin >> this->ProductCode;
 		break;
 	}
 	case 3:
 	{
 		cout << "Редактируемая цена товара: " << this->ProductCost << endl;
+		cout << "Новая цена товара: ";
 		cin >> this->ProductCost;
 		break;
 	}
 	case 4: {
 		cout << "Редактируемый товар: " << this->ProductName << endl;
+		cout << "Новое название товара: ";
 		cin >> this->ProductName;
 		cout << "Редактируемый код товара: " << this->ProductCode << endl;
+		cout << "Новый код товара: ";
 		cin >> this->ProductCode;
 		cout << "Редактируемая цена товара: " << this->ProductCost << endl;
+		cout << "Новая цена товара: ";
 		cin >> this->ProductCost;
 		break;
 	}

@@ -443,6 +443,7 @@ template<typename T>
 void List<T>::edit() {
 	{
 		Node<T> *p = first;
+		p->data.print();
 		int choice=p->data.selectEditCriteria();
 		cout << "Кого хотите изменить?: ";
 		int number;

@@ -1,4 +1,5 @@
 #include "Header.h"
+
 void userMenu(List<Admin> &adm) {
 	Admin admin;
 	while (1) {
@@ -45,12 +46,12 @@ int orderMenu(List<Client> &lst, List<Product> &pro, List<Order> &ord,List<Couri
 		cout << "\t\t\t\t\tМеню заказов" << endl;
 		cout << "1.Оформить заказ" << endl;
 		cout << "2.Список заказов" << endl;
-		cout << "3.Завершить заказ( досрочно)" << endl;
+		cout << "3.Завершить заказ(досрочно)" << endl;
 		cout << "4.Сортировать заказы" << endl;
 		cout << "5.Фильтрация заказов" << endl;
 		cout << "6.Поиск заказов" << endl;
-		cout << "7.Прибыль" << endl;
-		cout << "8.Назначить курьера на заказ" << endl;
+		cout << "7.Прибыль(бизнес - функция)" << endl;
+		cout << "8.Назначить курьера на доставку заказа" << endl;
 		cout << "0.Назад" << endl;
 		int x;
 		cin >> x;
@@ -281,7 +282,7 @@ int addMenu(List<Client> &lst,List<Product> &pro,List<Courier> &cour) {
 			courier.print();
 			system("pause");
 			break; }
-		case 4:return 0; break;
+		case 4:system("cls"); return 0; break;
 		default:system("cls"); cout << "Нет такого пункта меню"; break;
 		}
 	}
@@ -302,12 +303,12 @@ int menu(List<Client> &lst, List<Product> &pro,List<Order> &ord,List<Courier> &c
 		cout << "1.Добавление" << endl;
 		cout << "2.Удаление" << endl;
 		cout << "3.Фильтрация" << endl;
-		cout << "4.База данных" << endl;
+		cout << "4.База данных(Показать)" << endl;
 		cout << "5.Сохранить в файл" << endl;
 		cout << "6.Поиск" << endl;
 		cout << "7.Редактирование" << endl;
 		cout << "8.Сортировка" << endl;
-		cout << "9.Оформить заказ" << endl;
+		cout << "9.Оформление заказа" << endl;
 		cout << "10.Управление пользователями" << endl;
 		cout << "0.Выход" << endl;
 		cin >> x;
@@ -459,11 +460,11 @@ int main() {
 			int i=adm.compare(log,pas); 
 			if (i == 1) {
 				system("cls");
-				cout << "Вы не админ, пошли нахуй,пожалуйста" << endl;
+				cout << "Вы не админ, идите нахуй,пожалуйста" << endl;
 			}
 			else if (i == 2) {
 				system("cls");
-				cout << "Ну привет, любимый" << endl;
+				cout << "Приветсвую, Администратор" << endl;
 				menu(lst,pro,ord, cour,adm);
 			}
 			else { system("cls"); cout << "Проверьте правильность ввода данных" << endl; }

@@ -1,4 +1,6 @@
 #include "Header.h"
+
+//добавление курьера
 void Courier::setInfo() {
 	cout << "Имя курьера: ";
 	cin >> this->name;
@@ -9,12 +11,16 @@ void Courier::setInfo() {
 	cout << "Стаж работы: ";
 	cin >> this->experience;
 }
+
+//вывод списка курьеров в табличном виде
 void Courier::print() {
-	cout << "\t\t\t\tИмя курьера: " << this->name << endl;
-	cout << "\t\t\t\tФамилия курьера: " << this->surname << endl;
-	cout << "\t\t\t\tВозраст курьера: " << this->age << endl;
-	cout << "\t\t\t\tСтаж работы: " << this->experience << endl;
+	cout << "|``````````````|" << "``````````````|" << "`````````|" << "`````````````|" << endl;
+	cout << "|      Имя     |" << "    Фамилия   |" << " Возраст |" << " Стаж работы |" << endl;
+	cout << "|``````````````|" << "``````````````|" << "`````````|" << "`````````````|" << endl;
+	cout << "|" << setw(14) << this->name << "|" << setw(14) << this->surname << "|" << setw(9) << this->age << "|" << setw(13) << this->experience << "|" << endl;
 }
+
+//выбор критерия для поиска курьера
 int Courier::selectSearchCriteria() {
 	int choice;
 	cout << "По чем будем искать, голум?" << endl;
@@ -25,6 +31,8 @@ int Courier::selectSearchCriteria() {
 	cin >> choice;
 	return choice;
 }
+
+//функция поиска курьера
 void Courier::search(int choice, char *input) {
 	switch (choice) {
 	case 1:
@@ -58,6 +66,8 @@ void Courier::search(int choice, char *input) {
 	}
 	}
 }
+
+//выбор криетрия для редактирования
 int Courier::selectEditCriteria() {
 	int choice;
 	cout << "Что будем редактировать, простак?" << endl;
@@ -69,6 +79,8 @@ int Courier::selectEditCriteria() {
 	cin >> choice;
 	return choice;
 }
+
+//функция редактирования информации о курьере
 void Courier::edit(int choice) {
 	switch (choice) {
 	case 1:
