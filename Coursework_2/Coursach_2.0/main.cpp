@@ -32,7 +32,7 @@ void userMenu(List<Admin> &adm) {
 			adm.deleteElement(del);
 			system("pause");
 			break; }
-		case 4:return; break;
+		case 4:system("cls"); return; break;
 		default:system("cls"); cout << "Нет такого пункта меню" << endl; break;
 		}
 	}
@@ -135,7 +135,7 @@ int editMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 			cour.edit();
 			system("pause");
 			break; }
-		case 4:return 0; break;
+		case 4:system("cls"); return 0; break;
 		default:system("cls"); cout << "Нет такого пункта меню"; break;
 		}
 	}
@@ -169,7 +169,7 @@ int searchMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 			cour.search();
 			system("pause");
 			break; }
-		case 4:return 0; break;
+		case 4:system("cls"); return 0; break;
 		default:system("cls"); cout << "Нет такого пункта меню"; break;
 		}
 	}
@@ -212,7 +212,7 @@ int delMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 			cout << "Вы удалили:" << endl;
 			cour.deleteElement(del); system("pause");
 			break; }
-		case 4:return 0; break;
+		case 4:system("cls"); return 0; break;
 		default:system("cls"); cout << "Нет такого пункта меню"; break;
 		}
 	}
@@ -244,7 +244,7 @@ int printMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 			cour.print();
 			system("pause");
 			break; }
-		case 4:return 0; break;
+		case 4:system("cls"); return 0; break;
 		default:system("cls"); cout << "Нет такого пункта меню"; break;
 		}
 	}
@@ -342,14 +342,19 @@ int menu(List<Client> &lst, List<Product> &pro,List<Order> &ord,List<Courier> &c
 			adm.saveA("Admin.txt");
 			break;
 		}
-		case 6:
-		{
+		case 6: {
 			searchMenu(lst,pro,cour);
+			break;
+		}
+		case 7:editMenu(lst, pro, cour); break;
+		case 8: {
+			lst.sort();
 			break;
 		}
 		case 9: {orderMenu(lst,pro,ord,cour); break; }
 		case 0:
 		{
+			system("cls");
 			if (a == 0) {
 				while (1) {
 					cout << "Вы забыли сохранить изменения\nСделать это?" << endl;
@@ -375,10 +380,6 @@ int menu(List<Client> &lst, List<Product> &pro,List<Order> &ord,List<Courier> &c
 			return 0;
 			break;
 		}
-		case 8:
-			lst.sort();
-			break;
-		case 7:editMenu(lst,pro,cour); break;
 		case 10:userMenu(adm); break;
 		default:
 		{

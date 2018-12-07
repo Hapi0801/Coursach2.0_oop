@@ -86,33 +86,41 @@ void Courier::edit(int choice) {
 	case 1:
 	{
 		cout << "Редактируемое имя: " << this->name << endl;
+		cout << "Новое имя: ";
 		cin >> this->name;
 		break;
 	}
 	case 2: {
 		cout << "Редактируемая фамилия: " << this->surname << endl;
+		cout << "Новая фамилия: ";
 		cin >> this->surname;
 		break;
 	}
 	case 3:
 	{
 		cout << "Редактируемый возраст: " << this->age << endl;
+		cout << "Новый возраст: ";
 		cin >> this->age;
 		break;
 	}
 	case 4: {
 		cout << "Редактируемый стаж работы: " << this->experience << endl;
+		cout << "Новый стаж работы: ";
 		cin >> this->experience;
 		break;
 	}
 	case 5: {
 		cout << "Редактируемое имя: " << this->name << endl;
+		cout << "Новое имя: ";
 		cin >> this->name;
 		cout << "Редактируемая фамилия: " << this->surname << endl;
+		cout << "Новая фамилия: ";
 		cin >> this->surname;
 		cout << "Редактируемый возраст: " << this->age << endl;
+		cout << "Новый возраст: ";
 		cin >> this->age;
 		cout << "Редактируемый стаж работы: " << this->experience << endl;
+		cout << "Новый стаж работы: ";
 		cin >> this->experience;
 		break;
 	}
