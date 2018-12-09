@@ -190,6 +190,7 @@ int delMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 		case 1: {
 			system("cls");
 			int del;
+			
 			cout << "Введите номер клиента, которого желаете удалить: ";
 			cin >> del;
 			cout << "Вы удалили:" << endl;
@@ -198,6 +199,7 @@ int delMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 			break; }
 		case 2: {
 			system("cls"); 	int del;
+		
 			cout << "Введите номер товара, который желаете удалить: ";
 			cin >> del;
 			cout << "Вы удалили:" << endl;
@@ -207,6 +209,7 @@ int delMenu(List<Client> &lst, List<Product> &pro,List<Courier> &cour) {
 		case 3: {
 			system("cls");
 			int del;
+			
 			cout << "Введите номер товара, который желаете удалить: ";
 			cin >> del;
 			cout << "Вы удалили:" << endl;
@@ -324,6 +327,7 @@ int menu(List<Client> &lst, List<Product> &pro,List<Order> &ord,List<Courier> &c
 			break;
 		}
 		case 3: {
+			system("cls");
 			lst.filtr();
 			break;
 		}
@@ -446,8 +450,10 @@ int main() {
 	adm.downloadInfoA(admin,"Admin.txt");
 	adm.print();
 	while (1) {
+		cout << "\tДобро пожаловать в программу" << endl;
 		cout << "1.Вход" << endl;
-		cout << "2.Выход" << endl;
+		cout << "2.Выход" << endl<<endl;
+		cout << "Ваш выбор: ";
 		int i;
 		cin >> i;
 		switch (i) {

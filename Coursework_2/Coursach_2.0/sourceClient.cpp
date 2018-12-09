@@ -44,20 +44,20 @@ void Client::filtr(int choice, int a,int minAge,int maxAge) {
 	switch (choice) {
 	case 1: {
 		if (a == 1) {
-				cout << "|`````````|" << "```````````|" << endl;
-				cout << "|   Имя   |" << "  Возраст  |" << endl;
+			cout << "|`````````````|" << "```````````|" << "````````|" << "``````````````|" << "````````````|" << "````````````````|" << endl;
+			cout << "| Имя клиента |" << "  Фамилия  |" << " Возраст|" << "    Улица     |" << " Номер дома |" << " Номер квартиры |" << endl;
 		}
 		else if (a == 2) {
 			if (this->age > minAge && this->age < maxAge) {
-				cout << "|`````````|" << "```````````|" << endl;
-				cout << "|" << setw(9) << this->name << "|" << setw(11) << this->age << "|" << endl;
+				cout << "|`````````````|" << "```````````|" << "````````|" << "``````````````|" << "````````````|" << "````````````````|" << endl;
+				cout << "|" << setw(13) << this->name << "|" << setw(11) << this->surname << "|" << setw(8) << this->age << "|" << setw(14) << this->street << "|" << setw(12) << this->houseNumber << "|" << setw(16) << this->flat << "|" << endl;
 			}
 		}
 		else {
 			if (this->age > minAge && this->age < maxAge) {
-				cout << "|`````````|" << "```````````|" << endl;
-				cout << "|"<<setw(9) << this->name << "|"<<setw(11) << this->age <<"|"<< endl;
-				cout << "``````````" << "`````````````" << endl;
+				cout << "|`````````````|" << "```````````|" << "````````|" << "``````````````|" << "````````````|" << "````````````````|" << endl;
+				cout << "|" << setw(13) << this->name << "|" << setw(11) << this->surname << "|" << setw(8) << this->age << "|" << setw(14) << this->street << "|" << setw(12) << this->houseNumber << "|" << setw(16) << this->flat << "|" << endl;
+				cout << "```````````````" << "````````````" << "`````````" << "```````````````" << "`````````````" << "`````````````````" << endl;
 			}
 		}
 		break;
