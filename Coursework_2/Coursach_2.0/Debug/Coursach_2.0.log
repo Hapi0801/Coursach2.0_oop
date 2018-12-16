@@ -1,9 +1,7 @@
-﻿Сборка начата 09.12.2018 15:14:14.
+﻿Сборка начата 09.12.2018 23:03:59.
      1>Проект "C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Coursach_2.0\Coursach_2.0.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp sourceClient.cpp
-         sourceClient.cpp
-     1>c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\header.h(86): warning C4305: =: усечение из "double" к "float"
+         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
      1>c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\header.h(86): warning C4305: =: усечение из "double" к "float"
      1>c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\main.cpp(433): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
@@ -18,7 +16,6 @@
                  c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\list.h(245): при компиляции функции-члена "void List<Admin>::decrypt(void)" класса шаблон
                  c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\list.h(109): см. ссылку на создание экземпляров функции шаблон при компиляции "void List<Admin>::decrypt(void)"
      1>c:\users\dima\documents\visual studio 2013\projects\coursach2.0_oop\coursework_2\coursach_2.0\list.h(278): warning C4018: <: несоответствие типов со знаком и без знака
-         Создание кода...
        Link:
          D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Dima\Documents\Visual Studio 2013\Projects\Coursach2.0_oop\Coursework_2\Debug\Coursach_2.0.lib" /MACHINE:X86 Debug\Admin.obj
          Debug\main.obj
@@ -31,4 +28,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:04.98
+Затраченное время: 00:00:03.78

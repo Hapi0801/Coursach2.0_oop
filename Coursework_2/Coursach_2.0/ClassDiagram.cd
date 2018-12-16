@@ -8,14 +8,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Product">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="7" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCAAAAAAACAAAAAAAgAAAAAAAAAAAAACAAAgAKIAA=</HashCode>
       <FileName>Header.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Client">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAgAAAAAACQAAAgBAAAEAAAAgBAACAgAgAAAAQ=</HashCode>
       <FileName>Header.h</FileName>
@@ -29,14 +29,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Order">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAUAAAAAAIAAAAAAAAQgBSAgACAAAgAAACAAAAAAAQA=</HashCode>
       <FileName>Header.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Admin">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAQgAQAAAAAAAAAAAAAAAgAAUAA=</HashCode>
       <FileName>Header.h</FileName>
